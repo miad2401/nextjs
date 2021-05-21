@@ -1,57 +1,47 @@
 import Head from 'next/head'
 import React from 'react'
-import {Button} from '@material-ui/core'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Example Site</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>De'shon Mcneil</title>
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to the example site!
-        </h1>
-
-        <Button color="primary">Hewwo</Button>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
+        <div>
+          <h1 className={styles.title}>
+            Welcome!
+          </h1>
+        </div>
+        <div className={styles.spacer}></div>
+        <div>
+          <p className={styles.description}>
+            I'm De'shon Mcneil, a wearer of many hats including:<br></br>
+            software developer, artist, and game developer.<br></br>
+            I strive to provide engaging experiences that inspire<br></br>
+            others to be creative and think outside the norm.
+          </p>
+        </div>
+        <div className={styles.spacer}></div>
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="https://miad2401.itch.io/" className={styles.card}>
+            <h3>Games</h3>
+            <p>Find all of my current publicly released games.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a href="https://github.com/miad2401" className={styles.card}>
+            <h3>Programming</h3>
+            <p>Find all of my current and past software projects.</p>
           </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+          <a href="https://www.deviantart.com/miad2401" className={styles.card}>
+            <h3>Art</h3>
+            <p>Discover my artwork.</p>
           </a>
         </div>
+        <div className={styles.spacer}></div>
       </main>
 
       <footer className={styles.footer}>
