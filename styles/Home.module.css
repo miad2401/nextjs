@@ -1,47 +1,177 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #285943;
+  background-color: #5B5661;
+}
+
+.navigation {
+  display: fixed;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1001;
+}
+
+.nav1 {
+  position: absolute;
+  top: 0px;
+  z-index: 100;
+  width: 100%;
+  height: 120px;
+  background-color: hsla(348, 25%, 61%, 50%);
+  color: rgb(38, 38, 39);
+}
+
+.nav2 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+  position: relative;
+  align-self: center;
+  margin: auto;
+  max-width: 1200px;
+  width: 100%;
+  padding-top: 0px;
+  padding-right: 24px;
+  padding-bottom: 0px;
+  padding-left: 24px;
+}
+
+.nav3 {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  height: 120px;
+  grid-column-start: 1;
+  grid-column-end: span 12;
+}
+
+.navName {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-right: auto;
+}
+
+.navNameLink {
+  line-height: 0;
+}
+
+.navButtons {
+  display: flex;
+}
+
+.navButton {
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: 24px;
+  padding: 8px;
+  transition-property: opacity;
+  transition-duration: 0.2;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+  opacity: 1;
+}
+
+.navButton:hover {
+  opacity: 0.8;
+}
+
+.navDropDown {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  overflow: hidden;
+  transition-property: padding-top;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-delay: 0s;
+  padding-top: 0px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(38, 38, 39);
+  display: block;
+}
+
+.navDropMenu {
+  min-height: 350px;
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  color: rgb(255, 255, 255);
+  transform: translateY(7%);
+  transition-property: transform;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-delay: 0s;
+}
+
+.navDropGrid {
+  display: grid;
+  row-gap: 0px;
+  column-gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 0px;
+  padding-right: 32px;
+  padding-bottom: 0px;
+  padding-left: 32px;
+}
+
+.navLink {
+  color: inherit;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 19px;
+  margin-left: 24px;
+  padding: 8px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.navLink:hover {
+  opacity: 0.8;
 }
 
 .main {
-  width: 70%;
+  width: 100%;
   padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #94c9a9;
-}
-
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #885053;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: rgb(255,205,178);
+  background: -moz-radial-gradient(circle, rgba(255,205,178,1) 0%, rgba(255,180,162,1) 27%, rgba(229,152,155,1) 50%, rgba(181,131,141,1) 76%, rgba(109,104,117,1) 95%);
+  background: -webkit-radial-gradient(circle, rgba(255,205,178,1) 0%, rgba(255,180,162,1) 27%, rgba(229,152,155,1) 50%, rgba(181,131,141,1) 76%, rgba(109,104,117,1) 95%);
+  background: radial-gradient(circle, rgba(255,205,178,1) 0%, rgba(255,180,162,1) 27%, rgba(229,152,155,1) 50%, rgba(181,131,141,1) 76%, rgba(109,104,117,1) 95%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffcdb2",endColorstr="#6d6875",GradientType=1);
 }
 
 .spacer {
-  width: 50%;
+  width: 100%;
   margin-top: 3rem;
-  border-top: 1px solid #885053;
+  border-top: 1px solid #5B5661;
 }
 
 .title a {
@@ -105,8 +235,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #885053;
-  border-color: #885053;
+  color: #5B5661;
+  border-color: #5B5661;
 }
 
 .card h3 {
@@ -120,8 +250,10 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
+.dmlogo {
+  fill: none;
+  width: 253px;
+  height: 120px;
 }
 
 @media (max-width: 600px) {
